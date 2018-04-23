@@ -1,0 +1,42 @@
+{
+  "bridge": {
+    "name": "bdsd",
+    "username": "CC:22:3D:E1:CE:36",
+    "port": 51822,
+    "pin": "031-45-154"
+  },
+  "accessories": [
+  ],
+  "platforms": [
+    {
+      "platform": "Bobaos",
+      "name": "bobaos",
+      "accessories": [
+        {
+          "name": "Red",
+          "type": "light",
+          "control_dpt1": 6,
+          "status_dpt1": 6
+        },
+        {
+          "name": "Green",
+          "type": "light",
+          "control_dpt1": 7,
+          "status_dpt1": 7
+        },
+        {
+          "name": "Blue",
+          "type": "light",
+          "control_dpt1": 8,
+          "status_dpt1": 8
+        },
+        {
+          "name": "White",
+          "type": "light",
+          "control_dpt1": 9,
+          "status_dpt1": 9
+        }
+      ]
+    }
+  ]
+}
