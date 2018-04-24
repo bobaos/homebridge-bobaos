@@ -7,7 +7,7 @@ let myBobaos;
 module.exports = function (homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerPlatform("homebridge-bdsd", "Bobaos", BobaosPlatform);
+  homebridge.registerPlatform("homebridge-bobaos", "Bobaos", BobaosPlatform);
 };
 
 function BobaosPlatform(log, config) {

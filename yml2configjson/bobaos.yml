@@ -5,16 +5,16 @@ accessories:
         name: Livroom lights
         characteristics:
           - type: On 
-            control: 1
-            status: 2
+            control: 101
+            status: 105
   - name: Kitchen lights
     services:
       - type: Lightbulb
         name: Kitchen lights
         characteristics:
           - type: On
-            control: 3
-            status: 4
-          - type: Brightness
-            control: 5
+            control: 6
             status: 6
+          - type: Brightness
+            control: 2
+            status: 2
