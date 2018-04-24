@@ -1,8 +1,5 @@
-// TODO:> get config.json as first commandline arg
-// TODO:> get yml file as second arg
-// TODO:> generate json and stdout it
+#!/usr/bin/env node
 
-// Usage: node genBdsdPlatformConfig yamlFile.yml config.json "Platform"
 const yaml = require('js-yaml');
 const fs = require('fs');
 
