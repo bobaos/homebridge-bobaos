@@ -26,8 +26,6 @@ function BobaosPlatform(log, config) {
 BobaosPlatform.prototype = {
   accessories: function (cb) {
     let foundAccessories = [];
-    // TODO: _config.accessories.forEach => create new BobaosAccessory
-    // TODO: foundAccessories.push, cb(foundAccessories);
     let params = {
       Service: Service,
       Characteristic: Characteristic,
