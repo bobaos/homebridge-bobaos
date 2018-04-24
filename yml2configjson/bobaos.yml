@@ -7,6 +7,14 @@ accessories:
           - type: On 
             control: 101
             status: 105
+  - name: Livroom lights 2
+    services:
+      - type: Switch
+        name: Livroom lights 2
+        characteristics:
+          - type: On
+            control: 102
+            status: 106
   - name: Kitchen lights
     services:
       - type: Lightbulb
