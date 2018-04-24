@@ -61,7 +61,16 @@ Usage:
 genBobaosAccessories config.yml existingConfig.json > newConfig.json
 ```
 
-Config.yml should contains "accessory" section like in example above. Existing config.json may contains platform "Bobaos" in platform list or may not. If it contains then script will replace just "accessory" section for this platform, if not then it will create and push new platform information to json. 
+Config.yml should contains "accessory" section like in example above. Existing config.json may contains platform "Bobaos" in platform list or may not. If it contains then script will replace just "accessory" section for this platform, if not then it will create and push new platform information to json.
+Don't overwrite your existing config.json file, put it to newConfig.json, check if it is correct json and then replace config.json file.
+
+## Custom service support
+
+You may write your own service
+
+## Status
+
+
 
 ## Credits
 
