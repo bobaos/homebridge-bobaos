@@ -18,6 +18,7 @@ function BobaosPlatform(log, config) {
   } else {
     myBobaos = new BdsdClient();
   }
+  myBobaos.setMaxListeners(0);
   if (Object.prototype.hasOwnProperty.call(config, 'accessories')) {
     this._config.accessories = config['accessories'].slice();
   }
