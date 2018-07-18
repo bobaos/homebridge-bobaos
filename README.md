@@ -2,9 +2,10 @@
 
 ## Installation
 
-First of all, make sure that [homebridge](https://github.com/nfarina/homebridge) is installed. Then proceed to steps below. 
+First of all, make sure that [homebridge](https://github.com/nfarina/homebridge) is installed. Then proceed to steps below.
 
 Install plugin package:
+
 ```
 sudo npm install -g homebridge-bobaos
 ```
@@ -51,12 +52,12 @@ accessories:
           - type: Brightness
             control: 5
             status: 6
-
 ```
 
-In this npm package I provide with simple utility ```genBobaosAccessories``` which serves to generate json configuration.
+In this npm package I provide with simple utility `genBobaosAccessories` which serves to generate json configuration.
 
 Usage:
+
 ```
 genBobaosAccessories config.yml existingConfig.json > newConfig.json
 ```
@@ -68,9 +69,18 @@ Don't overwrite your existing config.json file, put it to newConfig.json, check 
 
 You may write your own service
 
+// TODO: manual
+
 ## Status
 
-
+// TODO: status
 
 ## Credits
 
+// TODO: credits
+
+## Support me
+
+You can send me a beer by PayPal
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/shabunin)
