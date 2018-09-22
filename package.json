@@ -22,7 +22,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "bdsd.client": "^1.0.4",
+    "bdsd.client": "^2.0.11",
+    "color-convert": "^1.9.3",
     "js-yaml": "^3.11.0"
   }
 }
