@@ -24,7 +24,6 @@ let configFilePath = process.argv[3];
 try {
   let ymlDoc = yaml.safeLoad(fs.readFileSync(yamlFilePath, 'utf8'));
   let jsonDoc = JSON.parse(fs.readFileSync(configFilePath, 'utf8'));
-  // TODO: let platforms
   if (jsonDoc.platforms !== undefined && Array.isArray(jsonDoc.platforms)) {
     const findByPlatform = t => {
       return t.platform === platformName
@@ -35,7 +34,6 @@ try {
       console.log(JSON.stringify(jsonDoc,' ', 2));
       process.exit();
     } else {
-      // TODO: push
       let newPlatform = {
         platform: platformName,
         name: platformName.toLowerCase(),
