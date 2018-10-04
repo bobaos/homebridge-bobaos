@@ -3,12 +3,18 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 
+console.log("genBobaosAccessories <yaml> <input_config> <output_config>");
+
 if (process.argv.length < 3) {
   throw new Error('Please provide yaml file as a commandline argument.');
 }
 
 if (process.argv.length < 4) {
-  throw new Error('Please provide config.json file as a commandline argument.')
+  throw new Error('Please provide input config.json file as a commandline argument.')
+}
+
+if (process.argv.length < 5) {
+  throw new Error('Please provide output config.json file as a commandline argument.')
 }
 
 // now platform name
@@ -18,12 +24,13 @@ if (process.argv[4]) {
 }
 
 let yamlFilePath = process.argv[2];
-let configFilePath = process.argv[3];
+let inputConfigFilePath = process.argv[3];
+let outputConfigFilePath = process.argv[4];
 
 
 try {
   let ymlDoc = yaml.safeLoad(fs.readFileSync(yamlFilePath, 'utf8'));
-  let jsonDoc = JSON.parse(fs.readFileSync(configFilePath, 'utf8'));
+  let jsonDoc = JSON.parse(fs.readFileSync(inputConfigFilePath, 'utf8'));
   if (jsonDoc.platforms !== undefined && Array.isArray(jsonDoc.platforms)) {
     const findByPlatform = t => {
       return t.platform === platformName
@@ -40,7 +47,10 @@ try {
         accessories: ymlDoc.accessories
       };
       jsonDoc.platforms.push(newPlatform);
-      console.log(JSON.stringify(jsonDoc, ' ', 2));
+      let data = JSON.stringify(jsonDoc, ' ', 2);
+      console.log(`writing output to ${outputConfigFilePath}`);
+      fs.writeFileSync(outputConfigFilePath, data);
+      console.log('success');
       process.exit();
     }
   }
