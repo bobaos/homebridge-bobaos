@@ -22,7 +22,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "bdsd.client": "^2.0.11",
+    "bobaos.sub": "^2.0.0",
     "color-convert": "^1.9.3",
     "js-yaml": "^3.11.0"
   }
