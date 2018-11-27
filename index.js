@@ -1,4 +1,4 @@
-const BdsdClient = require("bdsd.client");
+const Bobaos = require("bobaos.sub");
 const BobaosAccessory = require("./lib/accessory");
 
 let Service, Characteristic;
@@ -13,10 +13,10 @@ module.exports = function(homebridge) {
 function BobaosPlatform(log, config) {
   this._config = {};
   this.log = log;
-  if (Object.prototype.hasOwnProperty.call(config, "sockfile")) {
-    myBobaos = new BdsdClient(config["sockfile"]);
+  if (Object.prototype.hasOwnProperty.call(config, "redis")) {
+    myBobaos = new Bobaos(config["redis"]);
   } else {
-    myBobaos = new BdsdClient();
+    myBobaos = new Bobaos();
   }
   myBobaos.setMaxListeners(0);
   myBobaos.on("error", e => {
