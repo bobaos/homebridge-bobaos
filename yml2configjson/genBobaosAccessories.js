@@ -38,7 +38,10 @@ try {
     let platformIndex = jsonDoc.platforms.findIndex(findByPlatform);
     if (platformIndex > -1) {
       jsonDoc.platforms[platformIndex].accessories = ymlDoc.accessories;
-      console.log(JSON.stringify(jsonDoc,' ', 2));
+      let data = JSON.stringify(jsonDoc, ' ', 2);
+      console.log(`writing output to ${outputConfigFilePath}`);
+      fs.writeFileSync(outputConfigFilePath, data);
+      console.log('success');
       process.exit();
     } else {
       let newPlatform = {
