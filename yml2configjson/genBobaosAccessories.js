@@ -3,7 +3,7 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 
-console.log("genBobaosAccessories <yaml> <input_config> <output_config>");
+console.log("genBobaosAccessories <yaml> <input_config> <output_config> <platformName[Bobaos]>");
 
 if (process.argv.length < 3) {
   throw new Error('Please provide yaml file as a commandline argument.');
@@ -19,8 +19,8 @@ if (process.argv.length < 5) {
 
 // now platform name
 let platformName = "Bobaos";
-if (process.argv[4]) {
-  platformName = process.argv[4];
+if (process.argv[5]) {
+  platformName = process.argv[5];
 }
 
 let yamlFilePath = process.argv[2];
