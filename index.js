@@ -14,9 +14,9 @@ function BobaosPlatform(log, config) {
   this._config = {};
   this.log = log;
   if (Object.prototype.hasOwnProperty.call(config, "redis")) {
-    myBobaos = new Bobaos(config["redis"]);
+    myBobaos = Bobaos(config["redis"]);
   } else {
-    myBobaos = new Bobaos();
+    myBobaos = Bobaos();
   }
   myBobaos.setMaxListeners(0);
   myBobaos.on("error", e => {
