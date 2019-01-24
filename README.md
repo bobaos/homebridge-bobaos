@@ -1,5 +1,10 @@
 # homebridge-bobaos
 
+## Important notes
+
+This version works with [`bobaos.pub`](https://github.com/bobaoskit/bobaos.pub) package, `bdsd.sock` is not supported anymore.
+Npm version still works with `bdsd.sock` but in time I will publish this version over that.
+
 ## Installation
 
 First of all, make sure that [homebridge](https://github.com/nfarina/homebridge) is installed. Then proceed to steps below.
@@ -7,7 +12,8 @@ First of all, make sure that [homebridge](https://github.com/nfarina/homebridge)
 Install plugin package:
 
 ```
-sudo npm install -g homebridge-bobaos
+git clone https://github.com/bobaos/homebridge-bobaos.git
+sudo npm install -g ./homebridge-bobaos
 ```
 
 Add platform "Bobaos" to config.json file:
