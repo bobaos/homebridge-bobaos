@@ -1,7 +1,7 @@
 {
   "name": "homebridge-bobaos",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.99.0",
+  "description": "plugin for homebridge to work with bobaos.pub service",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -22,8 +22,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "bobaos.sub": "^2.0.0",
+    "bobaos.sub": "^2.0.4",
     "color-convert": "^1.9.3",
-    "js-yaml": "^3.11.0"
+    "js-yaml": "^3.13.1"
   }
 }

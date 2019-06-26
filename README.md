@@ -3,7 +3,6 @@
 ## Important notes
 
 This version works with [`bobaos.pub`](https://github.com/bobaoskit/bobaos.pub) package, `bdsd.sock` is not supported anymore.
-Npm version still works with `bdsd.sock` but in time I will publish this version over that.
 
 ## Installation
 
@@ -12,8 +11,7 @@ First of all, make sure that [homebridge](https://github.com/nfarina/homebridge)
 Install plugin package:
 
 ```
-git clone https://github.com/bobaos/homebridge-bobaos.git
-sudo npm install -g ./homebridge-bobaos
+npm install -g homebridge-bobaos
 ```
 
 Add platform "Bobaos" to config.json file:
@@ -77,16 +75,30 @@ You may write your own service
 
 // TODO: manual
 
+## Services
+
+1. Lightbulb
+
+```
+  - name: Kitchen lights          | - name: Kitchen lights
+    services:                     |   services:
+      - type: Lightbulb           |     - type: Lightbulb
+        name: Kitchen lights      |       name: Kitchen lights
+        characteristics:          |       characteristics:
+          - type: On              |         - type: On
+            control: 3            |           control: 3
+            status: 4             |           status: 4
+                                  |         - type: Brightness
+                                  |           control: 5
+                                  |           status: 6
+```
+
+
 ## Status
 
 // TODO: status
 
 ## Credits
 
-// TODO: credits
+Dmitry Golubin for `RGB` and `WindowCovering` service implementation.
 
-## Support me
-
-You can send me a beer by PayPal
-
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/shabunin)
